@@ -10,15 +10,16 @@ void bubble_sort(int *array, size_t size)
 	size_t j = 1;
 	int temp = 0;
 
-	while(i < size)
+	while(array[i] > array[j])
 	{
-		while(array[i] > array[j])
+		while(i < size)
 		{
-			temp = array[i];
-			array[i] = array[j];
-			array[j] = temp;	
-		}
-	i++;
-	j++;
+			if(array[i] > array[j])
+			{
+				temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+		}	
 	}
 }
